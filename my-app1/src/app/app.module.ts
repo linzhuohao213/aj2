@@ -9,6 +9,7 @@ import { HeroDeatailComponent } from './hero-detail.component';
 import { DashBoardComponent } from './dashboard.component';
 import { HeroService } from './hero.service';
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -22,17 +23,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      {
-        path:"heroes",
-        component:HeroComponent
-      },
-      {
-        path:"",
-        component:DashBoardComponent,
-        pathMatch: 'full'
-      }
-    ])
+    AppRoutingModule
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
